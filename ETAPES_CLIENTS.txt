@@ -1,0 +1,10 @@
+
+/* étapes 
+dans Core : enum; interface; model 
+pour Client => créer le service pour Clients (getter/setter, HttpClient)
+injecter le service dans page-list-clients 
+dans le constructor : déclencher l'appel API pour récupérer les data avec .subscribe
+affichage des données dans le tableau
+ajouter pipe pour calcul
+*/
+

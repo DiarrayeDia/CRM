@@ -1,0 +1,30 @@
+<header class="fixed-top">
+  <span (click)="toggle()">
+    <ng-content select='.tr-btn-close' *ngIf='!open'></ng-content>
+    <ng-content select='.tr-btn-nav' *ngIf='open'></ng-content>
+
+  </span>
+  <!-- utiliser webcomponent-->
+  <ng-content select=".tr-header"></ng-content>
+</header>
+<main [ngClass]="{'close-aside': open}">
+  <div class="shadow position-fixed">
+  </div>
+  <aside>
+    <div class="scroller">
+      <!-- utiliser webcomponent-->
+      <ng-content select=".tr-nav"></ng-content>
+    </div>
+  </aside>
+  <div class="page">
+    <div class="contents">
+      <!-- Ici contenu dynamique -->
+      <ng-content select='.tr-router'></ng-content>َ
+    </div>
+    <footer>
+      <!-- utiliser webcomponent-->>
+      Footer
+      <ng-content select=".tr-footer"></ng-content>
+    </footer>
+  </div>
+</main>

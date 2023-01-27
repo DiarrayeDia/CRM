@@ -1,0 +1,15 @@
+<table class="table">
+  <!-- thead utile pour le référencement -->
+  <thead>
+      <!-- table row (ligne) -->
+      <tr>
+          <!--   table header cells (th) -->
+          <th *ngFor="let item of headers" scope="col">{{item}}</th>
+      </tr>
+  </thead>
+  <tbody>
+    <!-- Chaque tr = table row = une rangée -->
+     <!-- Ici on projètela boucle depuis le parent -->
+     <ng-content></ng-content>
+  </tbody>
+</table>
